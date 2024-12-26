@@ -1,0 +1,142 @@
+/* Resetando margin e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cor de fundo e fontes do corpo */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fafafa; /* Cor de fundo suave */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Cabeçalho e navegação */
+header {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #f5f5f5; /* Cor clara ao passar o mouse */
+}
+
+/* Descrição logo abaixo do título */
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Estilo de carregamento */
+.loading {
+  display: none;
+  font-size: 1.5rem;
+  color: #4CAF50;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Estilo da área que contém as imagens */
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  transition: opacity 0.5s ease;
+}
+
+.content img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de hover nas imagens */
+.content img:hover {
+  transform: scale(1.05); /* Aumenta a imagem levemente ao passar o mouse */
+}
+
+/* Seções "Sobre" e "Contato" */
+section {
+  width: 100%;
+  max-width: 900px;
+  padding: 40px 20px;
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #4CAF50;
+}
+
+section p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Rodapé */
+footer {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+footer p {
+  color: #555;
+}
+
+/* Efeito para telas menores */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .content {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+}
